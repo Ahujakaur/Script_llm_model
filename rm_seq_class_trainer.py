@@ -35,8 +35,12 @@ DEFAULT_MODELS: List[str] = [
     "microsoft/deberta-v3-base",
     "unsloth/ModernBERT-large",
     "EleutherAI/neoBERT-400M",
-    "Qwen/Qwen2.5-0.5B-Instruct",
-    "Qwen/Qwen1.5-4B-Chat",
+    "Qwen/Qwen3-0.5B",
+    "Qwen/Qwen3-1.5B",
+    "Qwen/Qwen3-4B",
+    "Qwen/Qwen3.5-0.5B",
+    "Qwen/Qwen3.5-1.5B",
+    "Qwen/Qwen3.5-4B",
 ]
 
 MAX_SEQ_LENGTH = 2048
