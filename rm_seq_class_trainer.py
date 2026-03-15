@@ -35,8 +35,8 @@ MODEL_CANDIDATES: Dict[str, str] = {
 MODEL_KEY = "deberta_v3_base"  # change to sweep between candidates above
 MODEL_NAME = MODEL_CANDIDATES[MODEL_KEY]
 
-TRAIN_PATH = "transcribed_3000_train (1).csv"
-TEST_PATH = "transcribed_3000_test (1).csv"
+TRAIN_PATH = "novice_train.csv"
+TEST_PATH = "novice_val.csv"
 MAX_LENGTH = 512
 SEED = 3407
 
@@ -193,6 +193,8 @@ def main():
         seed=SEED,
         report_to="none",
         save_total_limit=2,
+        ddp_find_unused_parameters=False,
+        dataloader_num_workers=4,
     )
 
     trainer = Trainer(
